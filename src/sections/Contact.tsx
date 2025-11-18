@@ -1,6 +1,6 @@
 
 
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import closedMail from "../assets/cerrado.png";
 import openMail from "../assets/abierto.png";
 import emailjs from "emailjs-com";
@@ -10,6 +10,14 @@ function Contact() {
   const [emailSent, setEmailSent] = useState(false); //Mostrar un mensaje tipo “Enviado correctamente”
   const [isHovered, setIsHovered] = useState(false);
   const [showForm, setShowForm] = useState(false);
+
+  // Ocultar popup automáticamente después de 3 segundos
+  useEffect(() => {
+    if (emailSent) {
+      const timer = setTimeout(() => setEmailSent(false), 3000);
+      return () => clearTimeout(timer);
+    }
+  }, [emailSent]);
 
   //ENVIO DE EMAIL CON EMAILJS
   const sendEmail = (e: React.FormEvent) => {
@@ -54,8 +62,12 @@ function Contact() {
           />
         </div>
       ) : (
-        <div className="flex justify-center">
+        <div className="flex justify-center relative">
+
+
           <form
+
+
             ref={formRef}
             onSubmit={sendEmail}
             className="bg-white shadow-2xl rounded-2xl p-6 w-80 flex flex-col gap-4 animate-fadeIn"
@@ -120,7 +132,14 @@ function Contact() {
             >
               Cancelar
             </button>
+
+
           </form>
+          {emailSent && (
+            <div className="absolute top-0 right-0 bg-(--color-accent) text-white px-4 py-2 rounded shadow-lg animate-fadeIn">
+              ¡Correo enviado correctamente!
+            </div>
+          )}
         </div>
       )}
     </section>
