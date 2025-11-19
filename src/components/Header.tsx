@@ -2,7 +2,7 @@ export default function Header() {
   return (
     <header className="fixed top-0 left-0 w-full bg-white/70 backdrop-blur-md shadow-sm z-50">
       <div className="max-w-6xl mx-auto flex justify-between items-center p-4">
-        {/* Logo o Nombre */}
+        {/*  Nombre */}
         <h1 className="text-2xl font-bold text-(--color-dark)">MiPortfolio</h1>
 
         {/* Navegación */}

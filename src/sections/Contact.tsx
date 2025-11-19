@@ -42,7 +42,7 @@ function Contact() {
   return (
     <section
       id="contact"
-      className="section-default py-20 text-center bg-(--color-bg) text-(--color-dark)"
+      className="section-default py-20 text-center  text-(--color-dark)"
     >
       <h2 className="text-4xl font-bold mb-6">Contacto</h2>
       <p className="mb-8 text-(--color-gray)">
