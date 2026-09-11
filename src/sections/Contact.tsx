@@ -42,10 +42,10 @@ function Contact() {
   return (
     <section
       id="contact"
-      className="section-default py-20 text-center  text-(--color-dark)"
+      className="section-default py-20 text-center text-dark"
     >
       <h2 className="text-4xl font-bold mb-6">Contacto</h2>
-      <p className="mb-8 text-(--color-gray)">
+      <p className="mb-8 text-gray">
         ¿Quieres colaborar conmigo? ¡Hablemos!
       </p>
 
@@ -72,7 +72,7 @@ function Contact() {
             onSubmit={sendEmail}
             className="bg-white shadow-2xl rounded-2xl p-6 w-80 flex flex-col gap-4 animate-fadeIn"
           >
-            <h3 className="text-2xl font-semibold text-(--color-dark) mb-2">
+            <h3 className="text-2xl font-semibold text-dark mb-2">
               Contáctame
             </h3>
             <input
@@ -80,37 +80,37 @@ function Contact() {
               name="title"
               placeholder="Asunto"
               required
-              className="border border-(--color-dark) rounded-lg p-2 focus:outline-none focus:border-(--color-accent)"
+              className="border border-dark rounded-lg p-2 focus:outline-none focus:border-accent"
             />
             <input
               type="text"
               name="name"
               placeholder="Tu nombre"
               required
-              className="border border-(--color-dark) rounded-lg p-2 focus:outline-none focus:border-(--color-accent)"
+              className="border border-dark rounded-lg p-2 focus:outline-none focus:border-accent"
             />
             <input
               type="email"
               name="email"
               placeholder="Tu email"
-              className="border border-(--color-dark) rounded-lg p-2 focus:outline-none focus:border-(--color-accent)"
+              className="border border-dark rounded-lg p-2 focus:outline-none focus:border-accent"
             />
             <textarea
               name="message"
               placeholder="Tu mensaje"
               required
-              className="border border-(--color-dark) rounded-lg p-2 focus:outline-none focus:border-(--color-accent) h-24 resize-none"
+              className="border border-dark rounded-lg p-2 focus:outline-none focus:border-accent h-24 resize-none"
             ></textarea>
             <button
               type="submit"
               className="
-                    bg-(--color-secondary)
+                    bg-secondary
                     text-white
                     px-6 py-2
                     rounded-md
                     transition duration-300
                     hover:scale-105
-                    hover:bg-(--color-dark)
+                    hover:bg-dark
        "
             >
               Enviar
@@ -120,12 +120,12 @@ function Contact() {
               type="button"
               className="
                     text-sm
-                    text-(--color-secondary)
+                    text-secondary
                     border border-transparent
                     px-4 py-2
                     rounded-md
                     transition duration-300
-                    hover:text-(--color-secondary)
+                    hover:text-secondary
                     hover:scale-105
                   "
               onClick={() => setShowForm(false)}
@@ -136,7 +136,7 @@ function Contact() {
 
           </form>
           {emailSent && (
-            <div className="absolute top-0 right-0 bg-(--color-accent) text-white px-4 py-2 rounded shadow-lg animate-fadeIn">
+            <div className="absolute top-0 right-0 bg-accent text-white px-4 py-2 rounded shadow-lg animate-fadeIn">
               ¡Correo enviado correctamente!
             </div>
           )}

@@ -2,7 +2,7 @@ import heroImage from '../assets/hero.png'
 
 function Hero() {
   return (
-    <section className="w-full h-screen flex flex-col md:flex-row items-center justify-center text-center gap-8 bg-(--color-bg) text-(--color-dark)"
+    <section className="w-full h-screen flex flex-col md:flex-row items-center justify-center text-center gap-8 bg-bg text-dark"
     
     >
       
@@ -19,7 +19,7 @@ function Hero() {
         </p>
         <a
           href="#projects"
-          className="bg-(--color-accent) text-white px-8 py-3 rounded-full hover:bg-(--color-hover)"
+          className="bg-accent text-white px-8 py-3 rounded-full hover:bg-hover"
         >
           Ver mis proyectos
         </a>
