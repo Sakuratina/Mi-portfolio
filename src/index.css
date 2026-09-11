@@ -9,9 +9,6 @@
 
 
 :root {
-
-
-
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -20,29 +17,30 @@
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
 
-
-  --color-bg: #f6faff;
-  /* Fondo principal */
-  --color-secondary: #fff9f7;
-  /* Segundo fondo */
+  --color-bg: #ffffff;
+  --color-secondary: #f8f9fa;
   --color-accent: #D06937;
-  /* Color destacado / botones */
   --color-hover: #a85830;
-  /* Color destacado / botones */
   --color-warning: #e9c46a;
-  /* */
-  --color-dark: #262E4D;
-  /* Texto oscuro */
-  --color-gray: #7d7e83;
-  /* Texto gris */
-
-
-
+  --color-dark: #1a1a2e;
+  --color-gray: #6b7280;
+  --color-button-text: #ffffff;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.dark {
+  --color-bg: #0f0f1a;
+  --color-secondary: #1a1a2e;
+  --color-accent: #D06937;
+  --color-hover: #a85830;
+  --color-warning: #e9c46a;
+  --color-dark: #f0f0f0;
+  --color-gray: #b0b0b0;
+  --color-button-text: #000000;
 }
 
 a {

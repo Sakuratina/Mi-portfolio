@@ -42,10 +42,10 @@ function Contact() {
   return (
     <section
       id="contact"
-      className="section-default py-20 text-center text-dark"
+      className="section-default py-20 text-center" style={{ color: 'var(--color-dark)' }}
     >
       <h2 className="text-4xl font-bold mb-6">Contacto</h2>
-      <p className="mb-8 text-gray">
+      <p className="mb-8" style={{ color: 'var(--color-gray)' }}>
         ¿Quieres colaborar conmigo? ¡Hablemos!
       </p>
 
@@ -70,9 +70,9 @@ function Contact() {
 
             ref={formRef}
             onSubmit={sendEmail}
-            className="bg-white shadow-2xl rounded-2xl p-6 w-80 flex flex-col gap-4 animate-fadeIn"
+            className="shadow-2xl rounded-2xl p-6 w-80 flex flex-col gap-4 animate-fadeIn" style={{ backgroundColor: 'var(--color-secondary)' }}
           >
-            <h3 className="text-2xl font-semibold text-dark mb-2">
+            <h3 className="text-2xl font-semibold mb-2" style={{ color: 'var(--color-dark)' }}>
               Contáctame
             </h3>
             <input
@@ -80,26 +80,27 @@ function Contact() {
               name="title"
               placeholder="Asunto"
               required
-              className="border border-dark rounded-lg p-2 focus:outline-none focus:border-accent"
+              className="border rounded-lg p-2 focus:outline-none focus:border-accent" style={{ borderColor: 'var(--color-dark)', backgroundColor: 'var(--color-bg)', color: 'var(--color-dark)' }}
             />
             <input
               type="text"
               name="name"
               placeholder="Tu nombre"
               required
-              className="border border-dark rounded-lg p-2 focus:outline-none focus:border-accent"
+              className="border rounded-lg p-2 focus:outline-none focus:border-accent" style={{ borderColor: 'var(--color-dark)', backgroundColor: 'var(--color-bg)', color: 'var(--color-dark)' }}
             />
             <input
               type="email"
               name="email"
               placeholder="Tu email"
-              className="border border-dark rounded-lg p-2 focus:outline-none focus:border-accent"
+              className="border rounded-lg p-2 focus:outline-none focus:border-accent" style={{ borderColor: 'var(--color-dark)', backgroundColor: 'var(--color-bg)', color: 'var(--color-dark)' }}
             />
             <textarea
               name="message"
               placeholder="Tu mensaje"
               required
-              className="border border-dark rounded-lg p-2 focus:outline-none focus:border-accent h-24 resize-none"
+              className="border rounded-lg p-2 focus:outline-none focus:border-accent h-24 resize-none"
+              style={{ borderColor: 'var(--color-dark)', backgroundColor: 'var(--color-bg)', color: 'var(--color-dark)' }}
             ></textarea>
             <button
               type="submit"
@@ -112,6 +113,7 @@ function Contact() {
                     hover:scale-105
                     hover:bg-dark
        "
+              style={{ color: 'var(--color-button-text)', backgroundColor: 'var(--color-accent)' }}
             >
               Enviar
             </button>
@@ -120,15 +122,15 @@ function Contact() {
               type="button"
               className="
                     text-sm
-                    text-secondary
+                    text-white
                     border border-transparent
                     px-4 py-2
                     rounded-md
                     transition duration-300
-                    hover:text-secondary
                     hover:scale-105
                   "
               onClick={() => setShowForm(false)}
+              style={{ color: 'var(--color-button-text)', backgroundColor: 'var(--color-gray)' }}
             >
               Cancelar
             </button>
