@@ -1,4 +1,4 @@
-import heroImage from '../assets/hero.png' // Ajusta la ruta según tu carpeta
+import heroImage from '../assets/hero.png' 
 
 function Hero() {
   return (
@@ -15,7 +15,7 @@ function Hero() {
           Hola, soy Cristina
         </h1>
         <p className="text-gray-700 mb-6 max-w-lg mx-auto">
-          Desarrolladora Frontend enfocada en React y diseño limpio.
+          Desarrolladora fullstack enfocada en React y diseño limpio.
         </p>
         <a
           href="#projects"
